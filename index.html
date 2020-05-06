@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VZLOM</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5/reset.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <div class="menu__container">
+                <div class="menu__logo"><img src="img/menu-logo.svg" alt="VZLOM"></div>
+                <div class="menu__items">
+                    <a href="#"><span class="menu__item">Главная</span></a>
+                    <a href="#"><span class="menu__item">Главная</span></a>
+                    <a href="#"><span class="menu__item">Главная</span></a>
+                    <a href="#"><span class="menu__item">Главная</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hack">
+            <div class="start-hack">
+                <h1 class="start-hack__title">Взлом еще не был таким легким!</h1>
+                <p class="start-hack__description">Взломать страницу чужого контакта гораздо безопаснее, если обратиться
+                    к специалистам. Данный сервис предоставляет эту услугу.</p>
+                <form class="start-hack__button-container">
+                    <input class="hack-input" required autofocus type="url" name="target-link" id="hack-input"
+                        placeholder="Ссылка на профиль">
+                    <button class="hack-button" type="submit" id="hack-button">
+                        <p>Взломать</p>
+                    </button>
+                </form>
+            </div>
+
+            <div class="hack-started">
+                <div class="target-information">
+                    <div class="target-information__container">
+                        <div class="target-information__id">
+                            <p id="target-id"></p>
+                        </div>
+                        <p class="target-information__description" id="target-name"></p>
+                    </div>
+                    <img src="https://sun9-71.userapi.com/c846017/v846017161/8df6b/_rAinNkMq-U.jpg"
+                        class="target-information__avatar" id="target-avatar"></img>
+                </div>
+
+                <div class="hacking-in-progress">
+
+                    <div class="step">
+                        <span class="step__title">Шаг 1</span>
+                        <div class="step__container">
+                            <h1 class="step__name">Обход мобильного <br> аутентификатора</h1>
+                            <div class="progressbar">
+                                <div class="progressbar__progress" id="progress-bar-1"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <span class="step__title">Шаг 2</span>
+                        <div class="step__container">
+                            <h1 class="step__name">Подбор пароля</h1>
+                            <span class="potential-passcodes" id="potential-passcode">g812eg8712g</span>
+                            <div class="progressbar">
+                                <div class="progressbar__progress" id="progress-bar-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

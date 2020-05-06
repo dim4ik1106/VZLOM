@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'JetBrains Mono', Arial, san-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: white;
+}
+*:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+.hidden {
+  display: none !important;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0 160px;
+}
+.menu__container {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.menu__logo {
+  margin-right: 90px;
+}
+.menu__items {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.menu__item {
+  margin-right: 40px;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 31px;
+  color: white;
+}
+.hack {
+  height: 100vh;
+  background: url(../img/hack-background.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start-hack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1060px;
+}
+.start-hack__title {
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 67px;
+  margin-bottom: 30px;
+}
+.start-hack__description {
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 38px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.start-hack__button-container {
+  display: flex;
+  justify-content: center;
+}
+.hack-input {
+  width: 600px;
+  height: 80px;
+  border-radius: 10px;
+  padding: 25px 35px;
+  margin-right: 40px;
+  border: none;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 31px;
+  color: #828282;
+  transition: all 0.2s;
+}
+.hack-button {
+  width: 230px;
+  height: 80px;
+  background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s;
+  text-align: left;
+  padding-left: 30px;
+}
+.hack-button p {
+  font-family: 'JetBrains Mono', Arial, san-serif;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 79px;
+  color: #FFFFFF;
+}
+.hack-button p::after {
+  content: ' ';
+  display: inline-block;
+  position: relative;
+  left: 20px;
+  top: 6px;
+  width: 30px;
+  height: 30px;
+  background: url(../img/cpu.svg) no-repeat;
+}
+.hack-button:hover,
+.hack-input:hover {
+  transform: scale(1.05);
+  transition: all 0.2s;
+}
+.hack-started {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 1055px;
+  height: 720px;
+  background: #111113;
+  border-radius: 20px;
+  padding: 80px 75px 50px;
+  margin-top: 45px;
+}
+.target-information {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.target-information__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 60px;
+  align-items: center;
+}
+.target-information__id {
+  width: 100%;
+  height: 80px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 0 35px;
+  margin-bottom: 40px;
+}
+.target-information__description {
+  font-family: 'JetBrains Mono', Arial, san-serif;
+  font-size: 18px;
+  line-height: 27px;
+  color: #cfcfd0;
+  opacity: 0.8;
+}
+.target-information__avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+.target-information__id p {
+  font-size: 25px;
+  line-height: 79px;
+  background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.hacking-in-progress {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.step {
+  width: 412px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.step__title {
+  font-size: 25px;
+  line-height: 38px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.step__container {
+  width: 100%;
+  height: 233px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #0B0B0E;
+  border-radius: 20px;
+  padding: 40px 36px 45px;
+}
+.step__name {
+  font-size: 25px;
+  line-height: 38px;
+  text-align: center;
+}
+.progressbar {
+  width: 100%;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.progressbar__progress {
+  width: 0%;
+  height: 20px;
+  background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+  border-radius: 20px;
+}
+.potential-passcodes {
+  font-size: 25px;
+  line-height: 38px;
+  text-align: center;
+  background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
