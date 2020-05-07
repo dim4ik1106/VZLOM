@@ -7,6 +7,8 @@ let hackButton = document.getElementById('hack-button'),
     progressbar1 = document.getElementById('progress-bar-1'),
     progressbar2 = document.getElementById('progress-bar-2'),
     potentialPasscode = document.getElementById('potential-passcode'),
+    step1 = document.getElementById('step1'),
+    step2 = document.getElementById('step2'),
     vkDomainPattern = 'vk.com/',
     targetLink,
     targetProfileId,
@@ -14,7 +16,9 @@ let hackButton = document.getElementById('hack-button'),
     targetProfileName,
     targetSurname,
     targetPhoto100,
-    targetPhoto200;
+    targetPhoto200,
+    gray = "#5D5D60",
+    white = '#ffffff';
 
 
 $(hackInput).keyup(function (e) {
@@ -51,10 +55,10 @@ $(hackButton).click(function (e) {
             dataType: "JSONP",
             success: function (data) {
                 targetProfileId = data.response[0].id,
-                targetProfileName = data.response[0].first_name,
-                targetSurname = data.response[0].last_name,
-                targetPhoto100 = data.response[0].photo_100,
-                targetPhoto200 = data.response[0].photo_200;
+                    targetProfileName = data.response[0].first_name,
+                    targetSurname = data.response[0].last_name,
+                    targetPhoto100 = data.response[0].photo_100,
+                    targetPhoto200 = data.response[0].photo_200;
 
                 targetName.innerHTML = targetProfileName + ' ' + targetSurname + ' (id=' + targetProfileId + ')';
                 targetAvatar.src = targetPhoto200;
@@ -63,23 +67,32 @@ $(hackButton).click(function (e) {
 
 
         targetId.innerHTML = targetLink;
-        progressPlusOne(progressbar1, 80);
-        setTimeout(progressPlusOne, 3000, progressbar2, 120);
+        // progressPlusOne(progressbar1, 80);
+        setTimeout(progressPlusOne, 2000, progressbar1, 80);
+        setTimeout(changeColor, 2000, step1, white);
     }
 });
 
 
-
+function changeColor(elem, color) {
+    elem.style.color = color;
+}
 
 
 
 function progressPlusOne(bar, speed) {
     var width = 1;
     var interval = setInterval(frame, speed);
-
+    
+    
     function frame() {
         if (width >= 100) {
             clearInterval(interval);
+            if (bar == progressbar1) {
+                changeColor(step1, gray);
+                setTimeout(progressPlusOne, 2000, progressbar2, 140);
+                setTimeout(changeColor, 2000, step2, white);
+            }
         } else {
             width++;
             bar.style.width = width + '%';
