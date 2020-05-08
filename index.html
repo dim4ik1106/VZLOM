@@ -15,8 +15,8 @@
     <header>
         <div class="menu">
             <div class="menu__container">
-                <div class="menu__logo"><img src="img/menu-logo.svg" alt="VZLOM"></div>
                 <div class="menu__items">
+                    <div class="menu__logo menu__item"><img src="img/menu-logo.svg" alt="VZLOM"></div>
                     <a href="#"><span class="menu__item">Главная</span></a>
                     <a href="#"><span class="menu__item">Главная</span></a>
                     <a href="#"><span class="menu__item">Главная</span></a>
@@ -29,7 +29,7 @@
 
     <main>
         <section class="hack">
-            <div class="start-hack hidden">
+            <div class="start-hack">
                 <h1 class="start-hack__title">Взлом еще не был таким легким!</h1>
                 <p class="start-hack__description">Взломать страницу чужого контакта гораздо безопаснее, если обратиться
                     к специалистам. Данный сервис предоставляет эту услугу.</p>
@@ -42,11 +42,11 @@
                 </form>
             </div>
 
-            <div class="hack-started desktop hidden">
+            <div class="hack-started">
                 <div class="target-information">
                     <div class="target-information__container">
                         <div class="target-information__id">
-                            <p class="target-id"></p>
+                            <p class="target-id" id="target-id"></p>
                         </div>
                         <p class="target-information__description" id="target-name"></p>
                     </div>
@@ -80,35 +80,35 @@
             </div>
 
             <div class="mob-hack-started">
-                <img src="https://sun9-71.userapi.com/c846017/v846017161/8df6b/_rAinNkMq-U.jpg" alt="Фото жертвы" class="target-information__avatar">
+                <img id='mobile-target-avatar' src="https://sun9-71.userapi.com/c846017/v846017161/8df6b/_rAinNkMq-U.jpg" alt="Фото жертвы" class="target-information__avatar">
 
-                <div class="mob-information__container hidden">
+                <div class="mob-information__container">
                     <div class="target-information__id">
-                        <p class="target-id">snfkjsdnkjsdvkj</p>
+                        <p id="mobile-target-id" class="target-id">snfkjsdnkjsdvkj</p>
                     </div>
-                    <div class="target-information__description">Иван Мотузов</div>
-                    <button class="hack-button">
+                    <div class="target-information__description" id="mobile-target-name">Иван Мотузов</div>
+                    <button class="hack-button" id="mobile-next-button">
                         <p>Далее</p>
                     </button>
                 </div>
 
-                <div class="step hidden">
-                    <span class="step__title" id="step1">Шаг 1</span>
+                <div class="step mob-first-step">
+                    <span class="step__title" id="mobile-step1">Шаг 1</span>
                     <div class="step__container">
                         <h1 class="step__name">Обход мобильного <br> аутентификатора</h1>
                         <div class="progressbar">
-                            <div class="progressbar__progress" id="progress-bar-1"></div>
+                            <div class="progressbar__progress" id="mobile-progress-bar-1"></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="step">
-                    <span class="step__title" id="step2">Шаг 2</span>
+                <div class="step mob-second-step">
+                    <span class="step__title" id="mobile-step2">Шаг 2</span>
                     <div class="step__container">
                         <h1 class="step__name">Подбор пароля</h1>
-                        <span class="potential-passcodes" id="potential-passcode">g812eg8712g</span>
+                        <span class="potential-passcodes" id="mobile-potential-passcode">g812eg8712g</span>
                         <div class="progressbar">
-                            <div class="progressbar__progress" id="progress-bar-2"></div>
+                            <div class="progressbar__progress" id="mobile-progress-bar-2"></div>
                         </div>
                     </div>
                 </div>

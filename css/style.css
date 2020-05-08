@@ -31,9 +31,6 @@ a {
   display: flex;
   align-items: center;
 }
-.menu__logo {
-  margin-right: 90px;
-}
 .menu__items {
   height: 100%;
   display: flex;
@@ -46,6 +43,9 @@ a {
   line-height: 31px;
   color: white;
 }
+.menu__logo {
+  margin-right: 90px;
+}
 .menu-button {
   display: none;
   position: fixed;
@@ -55,7 +55,24 @@ a {
   height: 45px;
   background: url(../img/menu-button.svg);
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
+  .menu {
+    padding: 0 90px;
+  }
+  .menu__logo {
+    margin-right: 50px;
+  }
+  .menu__items {
+    min-width: 525px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .menu__item {
+    margin-right: 15px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 760px) {
   .menu {
     display: none;
   }
@@ -83,6 +100,7 @@ a {
   font-size: 55px;
   line-height: 67px;
   margin-bottom: 30px;
+  text-align: center;
 }
 .start-hack__description {
   font-weight: normal;
@@ -97,9 +115,10 @@ a {
 }
 .hack-input {
   width: 600px;
+  min-width: 300px;
   height: 80px;
   border-radius: 10px;
-  padding: 25px 35px;
+  padding: 25px 0px 25px 35px;
   margin-right: 40px;
   border: none;
   font-weight: normal;
@@ -140,14 +159,39 @@ a {
   transform: scale(1.05);
   transition: all 0.2s;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
+  .hack {
+    padding: 0 90px;
+  }
+  .start-hack__title {
+    font-size: 50px;
+    line-height: 61px;
+    margin-bottom: 30px;
+  }
+  .start-hack__description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .start-hack__button-container {
+    width: 100%;
+  }
+  .hack-input {
+    width: 100%;
+  }
+  .hack-button {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 600px) {
   .hack {
     padding: 0 40px;
+    background-position: 38% 100%;
   }
   .start-hack__title {
     font-size: 30px;
     line-height: 37px;
     margin-bottom: 15px;
+    text-align: left;
   }
   .start-hack__description {
     font-size: 14px;
@@ -293,6 +337,7 @@ a {
   border-radius: 20px;
 }
 .potential-passcodes {
+  display: none;
   font-size: 25px;
   line-height: 38px;
   text-align: center;
@@ -300,9 +345,11 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@media (max-width: 992px) {
+.mob-hack-started {
+  display: none;
+}
+@media (max-width: 600px) {
   .mob-hack-started {
-    display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -336,12 +383,13 @@ a {
     line-height: 24px;
   }
   .target-information__description {
-    font-size: 10px;
-    line-height: 15px;
+    font-size: 20px;
+    line-height: 33px;
     text-align: center;
     margin-bottom: 40px;
   }
   .step {
+    display: none;
     width: 100%;
     height: 180px;
     margin-top: 30px;
@@ -367,4 +415,8 @@ a {
   .progressbar {
     height: 15px;
   }
+}
+#mobile-step1,
+#mobile-step2 {
+  color: #ffffff;
 }
